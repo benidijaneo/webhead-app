@@ -5,9 +5,26 @@
 }
 
 :root {
-  --lavender: #a18be5;
-  --light-silver: #dad6dd;
-  --white: #ffffff;
+  /* PERMANENT */
+  --main-heading-clr: #a18be5;
+  --sample-text-clr: #ffffff;
+  --question-text-clr: #f9f6ee;
+  --challenge-content-bg: #ededef;
+  --challenge-content-clr: #000;
+
+  /* DARK MODE COLOR */
+  --sub-heading-clr-dm: #dad6dd;
+  --primary-bg-dm: #28282b;
+  --secondary-bg-dm: #343434;
+  --sample-box-clr-dm: #121418;
+  --general-text-clr-dm: #faf9f6;
+
+  /* LIGHT MODE COLOR */
+  /* --sub-heading-clr--wm: #333;
+  --primary-bg-wm: #ffffff;
+  --secondary-bg-wm: #e6e6e6;
+  --sample-box-clr-wm: #333333;
+  --general-text-clr-wm: #000; */
 
   /* --------  HTML LOGO CLR -------- */
   --html-prim-clr: #ef652a;
@@ -27,7 +44,11 @@
 
 body {
   font-family: "Roboto Mono", sans-serif;
-  background: linear-gradient(to bottom, #000000, #111111);
+  background: linear-gradient(
+    to bottom,
+    var(--primary-bg-dm),
+    var(--secondary-bg-dm)
+  );
 
   overflow-x: hidden;
 }
@@ -72,7 +93,7 @@ html {
   display: block;
   font-size: 2.4rem;
   font-weight: 600;
-  color: var(--light-silver);
+  color: var(--sub-heading-clr-dm);
   text-transform: uppercase;
   margin-bottom: 6.2rem;
   letter-spacing: 0.75px;
@@ -127,13 +148,13 @@ html {
   font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0.1rem;
-  color: var(--lavender);
+  color: var(--main-heading-clr);
   transition: all 0.3s;
 }
 
 .nav-link:hover,
 .nav-link:active {
-  color: var(--light-silver);
+  color: var(--sub-heading-clr-dm);
 }
 
 /* -> TOGGLE BUTTON  */
@@ -176,7 +197,7 @@ html {
 .hero-desc {
   font-size: 2rem;
   margin-bottom: 4.8rem;
-  color: var(--light-silver);
+  color: var(--sub-heading-clr-dm);
 }
 
 .primary-text {
@@ -185,7 +206,7 @@ html {
   text-transform: uppercase;
   margin-bottom: 3.2rem;
   border-bottom: 1px solid #baadc8;
-  color: var(--light-silver);
+  color: var(--sub-heading-clr-dm);
 }
 
 .primary-heading {
@@ -193,21 +214,21 @@ html {
   font-weight: 700;
   line-height: 1.05;
   margin-bottom: 6.8rem;
-  color: var(--lavender);
+  color: var(--main-heading-clr);
 }
 
 .learn-more--btn:link,
 .learn-more--btn:visited {
-  background-color: var(--lavender);
+  background-color: var(--main-heading-clr);
   color: #3d3b3f;
 }
 
 .learn-more--btn:hover,
 .learn-more--btn:active {
-  background-color: var(--light-silver);
-  color: var(--lavender);
+  background-color: var(--sub-heading-clr-dm);
+  color: var(--main-heading-clr);
   /* -> Trick to adding another border  */
-  box-shadow: inset 0 0 0 2px var(--lavender);
+  box-shadow: inset 0 0 0 2px var(--main-heading-clr);
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -241,7 +262,7 @@ html {
 .text-title-description {
   font-size: 2rem;
   line-height: 1.8;
-  color: #dad6dd;
+  color: var(--general-text-clr-dm);
   margin-bottom: 3.2rem;
 }
 
@@ -289,14 +310,17 @@ html {
 
 .html--heading {
   color: var(--html-sec-clr);
+  text-shadow: 3px 1px 3px rgba(0, 0, 0, 1);
 }
 
 .css--heading {
   color: var(--css-sec-clr);
+  text-shadow: 3px 1px 3px rgba(0, 0, 0, 1);
 }
 
 .js--heading {
-  color: var(--js-sec-clr);
+  color: var(--js-prim-clr);
+  text-shadow: 3px 1px 3px rgba(0, 0, 0, 1);
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------
@@ -304,7 +328,7 @@ html {
 ----------------------------------------------------------------------------------------------------------------------------------------  */
 
 .box {
-  background-color: #121418;
+  background-color: var(--sample-box-clr-dm);
   box-shadow: 0 4px 30px rgb(0 0 0 / 0.2);
   border-radius: 9px;
   margin-bottom: 3.2rem;
@@ -323,7 +347,8 @@ html {
   padding-bottom: 1.6rem;
 }
 .example-title {
-  color: #c5c8d4;
+  /* color: #c5c8d4; */
+  color: var(--sample-text-clr);
   font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -440,7 +465,6 @@ html {
   padding: 4rem 8rem 0 8rem;
   border-radius: 9px;
   border: 1px solid rgba(0, 0, 0, 0);
-
   box-shadow: 0 4px 30px rgb(0 0 0 / 0.2);
 }
 
@@ -461,10 +485,10 @@ input {
   font-family: inherit;
   font-size: 1.4rem;
   background: none;
-  color: #fff;
+  color: var(--general-text-clr-dm);
 
   width: auto;
-  border: 0.5px solid #fff;
+  border: 0.5px solid var(--general-text-clr-dm);
   border-radius: 2px;
 }
 
@@ -484,11 +508,12 @@ input:focus {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  background-color: var(--sample-box-clr-dm);
 }
 
 .tab {
   width: 35rem;
-  color: white;
+  color: var(--general-text-clr-dm);
   overflow: hidden;
 }
 
@@ -496,10 +521,11 @@ input:focus {
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  background: #121418;
+  background: var(--sample-box-clr);
   font-weight: bold;
   cursor: pointer;
   font-size: 2rem;
+  color: var(--sample-text-clr);
   /* Icon */
 }
 .tab-label:hover {
@@ -517,7 +543,7 @@ input:focus {
 .tab-content {
   max-height: 0;
   color: #2c3e50;
-  background: white;
+  background: var(--challenge-content-bg);
   transition: all 0.4s;
 }
 
@@ -526,14 +552,14 @@ input:focus {
   display: flex;
   text-decoration: none;
   font-size: 1.6rem;
-  color: #000;
+  color: var(--challenge-content-clr);
   padding: 1rem 0 1rem 2rem;
 }
 
 .exercise-links:hover,
 .exercise-links:active {
   background-color: #cfc5f2;
-  color: #fff;
+  color: #000;
 }
 
 .exercise-links:focus {
@@ -545,8 +571,9 @@ input:focus {
   justify-content: flex-end;
   padding: 1em;
   font-size: 0.75em;
-  background: #121418;
+  background: var(--sample-box-clr);
   cursor: pointer;
+  color: var(--sample-text-clr);
 }
 .tab-close:hover {
   background: rgb(27, 27, 27);
@@ -581,20 +608,20 @@ input:checked ~ .tab-content {
 
 .question-box h1 {
   text-align: center;
-  color: #dad6dd;
+  color: var(--question-text-clr);
   font-size: 3rem;
   margin-bottom: 1.8rem;
 }
 
 .question-details {
   padding: 0 2rem;
-  color: #dad6dd;
+  color: var(--question-text-clr);
   font-size: 1.6rem;
   margin-bottom: 1.8rem;
 }
 
 .question-text {
-  color: #fff;
+  color: var(--question-text-clr);
   font-size: 1.6rem;
 }
 
@@ -604,6 +631,62 @@ input:checked ~ .tab-content {
 
 .q1-attributes--active {
   display: block;
+}
+
+/* SHOW/SUBMIT ANS BUTTONS */
+
+.btn-container {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: end;
+  padding-right: 2.4rem;
+}
+
+.ch-btn {
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  font-family: inherit;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.submit-answer__btn {
+  border: none;
+  color: #fff;
+  background-color: #a18be5;
+}
+.show-answer__btn {
+  border: none;
+  color: #fff;
+  background-color: #343434;
+}
+
+.show-answer__btn::after,
+.submit-answer__btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+
+.show-answer__btn:active,
+.submit-answer__btn:active {
+  top: 0.2rem;
 }
 
 /* -------------------------------------------------------
@@ -617,5 +700,5 @@ input:checked ~ .tab-content {
 
 .footer-text {
   font-size: 1.6rem;
-  color: #fff;
+  color: var(--general-text-clr-dm);
 }
