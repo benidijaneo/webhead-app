@@ -1,0 +1,621 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lavender: #a18be5;
+  --light-silver: #dad6dd;
+  --white: #ffffff;
+
+  /* --------  HTML LOGO CLR -------- */
+  --html-prim-clr: #ef652a;
+  --html-sec-clr: #e34f26;
+
+  /* -------- CSS LOGO CLR -------- */
+  --css-prim-clr: #2965f1;
+  --css-sec-clr: #264de4;
+
+  /* -------- JS LOGO CLR -------- */
+  --js-prim-clr: #f7df1e;
+  --js-sec-clr: #dec91b;
+
+  /* -------- SPACING PADDING -------- */
+  --section-p: 12.8rem 0;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  background: linear-gradient(to bottom, #000000, #111111);
+
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* -------------------------------------------------------
+                    REUSABLEEEE
+-----------------------------------------------------------  */
+.container {
+  /* 1140 px  */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 8rem;
+  row-gap: 12.8rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.sub-heading {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--light-silver);
+  text-transform: uppercase;
+  margin-bottom: 6.2rem;
+  letter-spacing: 0.75px;
+
+  text-align: center;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.6rem 2.4rem;
+  border-radius: 9px;
+  transition: all 0.3s;
+  margin-bottom: 6.8rem;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------
+                    HEADER
+----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8.6rem;
+  padding: 0 4.8rem;
+}
+
+.icon {
+  height: 4.2rem;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+                      NAVIGATION
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------  */
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  list-style: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: var(--lavender);
+  transition: all 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: var(--light-silver);
+}
+
+/* -> TOGGLE BUTTON  */
+
+.btn-toggle--mode {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.btn-dark--mode:hover {
+  color: var(--js-prim-clr);
+}
+.btn-dark--mode {
+  height: 2.2rem;
+  width: 2.2rem;
+  color: var(--white);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------
+                      HERO SECTION
+---------------------------------------------------------------------------------------------------------------------------------------- */
+.section-hero {
+  padding: 9.6rem 0 9.6rem 0;
+  height: 100vh;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.hero-text-box {
+  border-bottom: 1px solid #baadc8;
+}
+
+.hero-desc {
+  font-size: 2rem;
+  margin-bottom: 4.8rem;
+  color: var(--light-silver);
+}
+
+.primary-text {
+  font-size: 4.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+  border-bottom: 1px solid #baadc8;
+  color: var(--light-silver);
+}
+
+.primary-heading {
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 6.8rem;
+  color: var(--lavender);
+}
+
+.learn-more--btn:link,
+.learn-more--btn:visited {
+  background-color: var(--lavender);
+  color: #3d3b3f;
+}
+
+.learn-more--btn:hover,
+.learn-more--btn:active {
+  background-color: var(--light-silver);
+  color: var(--lavender);
+  /* -> Trick to adding another border  */
+  box-shadow: inset 0 0 0 2px var(--lavender);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                      EXAMPLE SECTION
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.section-logos {
+  padding: 12.8rem 0;
+}
+
+.logos {
+  height: 20em;
+  width: 20em;
+}
+
+.flex--logos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section-examples {
+  padding: 12.8rem 0;
+}
+
+.text-title {
+  font-size: 3.6rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.text-title-description {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #dad6dd;
+  margin-bottom: 3.2rem;
+}
+
+.learn-html--btn:link,
+.learn-html--btn:visited {
+  background-color: var(--html-prim-clr);
+  color: #2d333b;
+
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+
+.learn-html--btn:hover,
+.learn-html--btn:active {
+  background-color: var(--html-sec-clr);
+  box-shadow: none;
+}
+
+.learn-css--btn:link,
+.learn-css--btn:visited {
+  background-color: var(--css-prim-clr);
+  color: #2d333b;
+
+  transition: all 0.3s;
+  margin-bottom: 0;
+}
+
+.learn-css--btn:hover,
+.learn-css--btn:active {
+  background-color: var(--css-sec-clr);
+}
+
+.learn-js--btn:link,
+.learn-js--btn:visited {
+  background-color: var(--js-prim-clr);
+  color: #2d333b;
+
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+.learn-js--btn:hover,
+.learn-js--btn:active {
+  background-color: var(--js-sec-clr);
+}
+
+.html--heading {
+  color: var(--html-sec-clr);
+}
+
+.css--heading {
+  color: var(--css-sec-clr);
+}
+
+.js--heading {
+  color: var(--js-sec-clr);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------
+                      SAMPLE BOX
+----------------------------------------------------------------------------------------------------------------------------------------  */
+
+.box {
+  background-color: #121418;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 0.2);
+  border-radius: 9px;
+  margin-bottom: 3.2rem;
+}
+
+.sample-box {
+  max-width: 52.5rem;
+}
+
+.title-box {
+  display: grid;
+  padding: 1.6rem 1.4rem;
+  grid-template-columns: 36px auto 36px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.411);
+  padding-bottom: 1.6rem;
+}
+.example-title {
+  color: #c5c8d4;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
+
+.cog-icon,
+.arrow-down-icon {
+  color: #4c4f5a;
+  width: 21px;
+  height: 21px;
+}
+
+.text-content {
+  padding: 1.6rem;
+  line-height: 1.2;
+  font-size: 1.8rem;
+}
+.hello-w {
+  color: #f28455;
+  padding-left: 1.6rem;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/* -> TEXT EDITOR COLORS */
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
+.text-content {
+  --cadet-blue: #abb2bf;
+  --candy-pink: #e06c75;
+  --brown-yellow: #d19a66;
+  --gold: #e5c07b;
+  --max-blue: #56b6c2;
+  --blue-jeans: #61afef;
+  --deep-mauve: #c678dd;
+}
+
+.cadet-blue {
+  color: var(--cadet-blue);
+}
+.candy-pink {
+  color: var(--candy-pink);
+}
+.brown-yellow {
+  color: var(--brown-yellow);
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.max-blue {
+  color: var(--max-blue);
+}
+
+.blue-jeans {
+  color: var(--blue-jeans);
+}
+
+.get-elem-color {
+  color: #98c379;
+}
+
+.deep-mauve {
+  color: var(--deep-mauve);
+}
+
+.padding-left {
+  padding-left: 1.8rem;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------------
+                      -> CHALLENGE SECTION
+   -----------------------------------------------------------------------------------------------------------------------  */
+
+.challenge-section {
+  padding: 0 0 6.4rem 0;
+  background-image: url(/img/Ocean-2.5s-1872px.svg);
+  background-position: bottom;
+  background-size: cover;
+  /* background-image: url(/Cloud-14.3s-1084px.svg); */
+}
+
+.challenges-header {
+  background-color: #a18be5;
+  height: 8.6rem;
+  padding: 0 4.8rem;
+  border-bottom: 1px solid #d1b8eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ch-nav__list {
+  display: flex;
+  gap: 10rem;
+  list-style: none;
+}
+.nav-btn:link,
+.nav-btn:visited {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.4rem;
+
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.challenge-container {
+  max-width: 120rem;
+  margin: 8rem auto 0 auto;
+  padding: 4rem 8rem 0 8rem;
+  border-radius: 9px;
+  border: 1px solid rgba(0, 0, 0, 0);
+
+  box-shadow: 0 4px 30px rgb(0 0 0 / 0.2);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/*        ACCORDION STYLES                     */
+/* -----------------------------------------------------------------------------------------------------------------------*/
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.answer-input {
+  z-index: 1;
+  opacity: 1;
+  position: static;
+  font-family: inherit;
+  font-size: 1.4rem;
+  background: none;
+  color: #fff;
+
+  width: auto;
+  border: 0.5px solid #fff;
+  border-radius: 2px;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem rgba(161, 139, 229, 0.5);
+}
+
+.accordion {
+  margin: auto;
+  padding-bottom: 3.2rem;
+  overflow: auto;
+}
+
+.tabs {
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  width: 35rem;
+  color: white;
+  overflow: hidden;
+}
+
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #121418;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 2rem;
+  /* Icon */
+}
+.tab-label:hover {
+  background: rgb(27, 27, 27);
+}
+
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+
+.tab-content {
+  max-height: 0;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.4s;
+}
+
+.exercise-links:link,
+.exercise-links:visited {
+  display: flex;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #000;
+  padding: 1rem 0 1rem 2rem;
+}
+
+.exercise-links:hover,
+.exercise-links:active {
+  background-color: #cfc5f2;
+  color: #fff;
+}
+
+.exercise-links:focus {
+  outline: none;
+}
+
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #121418;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: rgb(27, 27, 27);
+}
+input:checked + .tab-label {
+  background: #000;
+}
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------- */
+/*        QUESTIONS                   */
+/* -----------------------------------------------------------------------------------------------------------------------*/
+
+.question-box-container {
+  max-width: 45rem;
+}
+
+.question-content {
+  padding: 1.6rem;
+  line-height: 1.2;
+  font-size: 1.8rem;
+}
+
+.question-box {
+  margin-bottom: 3.2rem;
+}
+
+.question-box h1 {
+  text-align: center;
+  color: #dad6dd;
+  font-size: 3rem;
+  margin-bottom: 1.8rem;
+}
+
+.question-details {
+  padding: 0 2rem;
+  color: #dad6dd;
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.question-text {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.hide-content {
+  display: none;
+}
+
+.q1-attributes--active {
+  display: block;
+}
+
+/* -------------------------------------------------------
+                      -> FOOTER
+-----------------------------------------------------------  */
+
+.footer {
+  padding: 5.4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-text {
+  font-size: 1.6rem;
+  color: #fff;
+}

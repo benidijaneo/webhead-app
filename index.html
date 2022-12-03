@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/queries.css" />
+
+    <title>Web Head</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="icon" src="/img/icon.png" alt="Web Head Logo" />
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li>
+            <a href="#" class="nav-link" aria-label="nav-btn">CHALLENGES </a>
+          </li>
+          <li>
+            <button title="Dark Mode" type="button" class="btn-toggle--mode">
+              <ion-icon
+                class="btn__mode btn-dark--mode"
+                name="moon-sharp"
+              ></ion-icon>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- -------- HERO SECTION -------- -->
+
+    <section class="section-hero">
+      <div class="hero">
+        <div class="hero-text-box">
+          <h3 class="primary-text">
+            Welcome to Web Head!
+            <br />
+            <br />
+          </h3>
+          <h1 class="primary-heading">
+            Are you an aspiring Front-end Developer?
+          </h1>
+          <p class="hero-desc">
+            A front-end dev takes care of the layout, design and interactivity
+            using <strong>HTML</strong>, <strong>CSS</strong> and
+            <strong>JavaScript</strong>. They take an idea from the drawing
+            board and turn it into reality.
+          </p>
+
+          <a href="#" title="button" class="btn learn-more--btn">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------- LOGOS -------- -->
+
+    <section class="section-logos">
+      <div class="container">
+        <span class="sub-heading"
+          >Here are the 3 core technologies of the Web</span
+        >
+        <div class="container flex--logos">
+          <svg
+            fill="none"
+            height="2500"
+            width="2183"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 124 141.53199999999998"
+            class="logos"
+            data-aos="flip-up"
+            data-aos-duration="1500"
+          >
+            <path
+              d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z"
+              fill="#e34f26"
+            />
+            <path
+              d="M62.468 129.277V12.085l51.064.17-9.106 104.851z"
+              fill="#ef652a"
+            />
+            <path
+              d="M99.49 41.362l1.446-15.49H22.383l4.34 47.49h54.213L78.81 93.617l-17.362 4.68-17.617-5.106-.936-12.085H27.319l2.128 24.681 32 8.936 32.255-8.936 4.34-48.17H41.107L39.49 41.362z"
+              fill="#fff"
+            />
+          </svg>
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 512 512"
+            class="logos"
+            data-aos="flip-up"
+            data-aos-duration="1500"
+          >
+            <path
+              fill="#264de4"
+              d="M71.357 460.819L30.272 0h451.456l-41.129 460.746L255.724 512z"
+            />
+            <path
+              fill="#2965f1"
+              d="M405.388 431.408l35.148-393.73H256v435.146z"
+            />
+            <path
+              fill="#ebebeb"
+              d="M124.46 208.59l5.065 56.517H256V208.59zM119.419 150.715H256V94.197H114.281zM256 355.372l-.248.066-62.944-16.996-4.023-45.076h-56.736l7.919 88.741 115.772 32.14.26-.073z"
+            />
+            <path
+              fill="#fff"
+              d="M255.805 208.59v56.517H325.4l-6.56 73.299-63.035 17.013v58.8l115.864-32.112.85-9.549 13.28-148.792 1.38-15.176 10.203-114.393H255.805v56.518h79.639L330.3 208.59z"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 630 630"
+            class="logos"
+            data-aos="flip-up"
+            data-aos-duration="1500"
+          >
+            <rect width="630" height="630" fill="#f7df1e" />
+            <path
+              d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- -------- EXAMPLE SECTION -------- -->
+
+    <section class="section-examples">
+      <div class="container grid grid--2-cols grid--center-v">
+        <!-- -------- HTML BOX -------- -->
+
+        <div class="text-title-box">
+          <h3 class="text-title html--heading">What is HTML?</h3>
+          <p class="text-title-description">
+            HyperText Markup Language (HTML) is the set of markup symbols or
+            codes inserted into a file intended for display on the Internet. The
+            markup tells web browsers how to display a web page's words and
+            images.
+          </p>
+
+          <a href="#" title="Learn HTML" class="btn learn-html--btn"
+            >Learn HTML</a
+          >
+        </div>
+        <div class="sample-box">
+          <div class="box">
+            <div class="title-box">
+              <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+              <p class="example-title html--heading">HTML Example</p>
+              <ion-icon
+                class="arrow-down-icon"
+                name="chevron-down-outline"
+              ></ion-icon>
+            </div>
+
+            <div class="text-content">
+              <span class="cadet-blue"> <</span><span class="cadet-blue">!</span
+              ><span class="candy-pink">DOCTYPE</span>
+              <span class="brown-yellow">html</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <br />
+              <span class="cadet-blue"> <</span
+              ><span class="candy-pink">html</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <span class="cadet-blue"> <</span
+              ><span class="candy-pink">body</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <br />
+              <span class="cadet-blue"> <</span
+              ><span class="candy-pink">div</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <span class="hello-w">&lt;p> Hello World! &lt;/p></span>
+              <br />
+              <span class="cadet-blue"> <</span><span class="cadet-blue">/</span
+              ><span class="candy-pink">div</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <br />
+              <span class="cadet-blue"> <</span><span class="cadet-blue">/</span
+              ><span class="candy-pink">body</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <span class="cadet-blue"> <</span><span class="cadet-blue">/</span
+              ><span class="candy-pink">html</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+
+        <!-- -------- CSS BOX -------- -->
+        <div class="sample-box">
+          <div class="box">
+            <div class="title-box">
+              <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+              <p class="example-title">CSS Example</p>
+              <ion-icon
+                class="arrow-down-icon"
+                name="chevron-down-outline"
+              ></ion-icon>
+            </div>
+
+            <div class="text-content">
+              <span class="candy-pink">body</span>
+              <span class="gold">{</span> <br />
+              <span class="cadet-blue">background-color:</span>
+              <span class="max-blue">lightblue;</span> <br />
+              <span class="gold">}</span>
+              <br />
+              <br />
+              <span class="candy-pink">h1</span>
+              <span class="gold">{</span> <br />
+              <span class="cadet-blue">color:</span>
+              <span class="max-blue">white;</span> <br />
+              <span class="cadet-blue">text-align:</span>
+              <span class="max-blue">center;</span> <br />
+              <span class="gold">}</span>
+              <br />
+              <br />
+              <span class="candy-pink">p</span>
+              <span class="gold">{</span> <br />
+              <span class="cadet-blue">font-family:</span>
+              <span class="max-blue">'Roboto Mono';</span> <br />
+              <span class="gold">}</span>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          class="text-title-box"
+        >
+          <h3 class="text-title css--heading">What is CSS?</h3>
+          <p class="text-title-description">
+            CSS stands for Cascading Style Sheets language and is used to
+            stylize elements written in a markup language such as HTML. It
+            separates the content from the visual representation of the site.
+          </p>
+          <a href="#" title="Learn CSS" class="btn learn-css--btn">Learn CSS</a>
+        </div>
+
+        <!-- -------- JS SAMPLE BOX -------- -->
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="text-title-box animate__animated animate__fadeInUp"
+        >
+          <h3 class="text-title js--heading">What is JavaScript?</h3>
+          <p class="text-title-description">
+            JavaScript is a scripting language that enables you to create
+            dynamically updating content, control multimedia, animate images,
+            and pretty much everything else.
+          </p>
+
+          <a href="#" title="Learn Javascript" class="btn learn-js--btn"
+            >Learn JavaScript</a
+          >
+        </div>
+        <div class="sample-box">
+          <div class="box">
+            <div class="title-box">
+              <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+              <p class="example-title js--heading">JavaScript Example</p>
+              <ion-icon
+                class="arrow-down-icon"
+                name="chevron-down-outline"
+              ></ion-icon>
+            </div>
+
+            <div class="text-content">
+              <span class="property-color"> <</span
+              ><span class="candy-pink">button</span>
+              <span class="get-elem-color">onclick</span>
+              <span class="candy-pink">=</span>
+              <span class="gold">"myFunction()"</span
+              ><span class="cadet-blue">>Click Me!</span
+              ><span class="cadet-blue"> <</span
+              ><span class="cadet-blue">/</span
+              ><span class="candy-pink">button</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <br />
+              <br />
+              <span class="cadet-blue"> <</span
+              ><span class="candy-pink">script</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <span class="cadet-blue">function myFunction</span>
+              <span class="gold">() {</span>
+              <br />
+              <br />
+              <span class="cadet-blue">let x</span>
+              <span class="candy-pink">=</span>
+              <span class="blue-jeans">document</span
+              ><span class="get-elem-color">.getElementById</span>
+              <span class="deep-mauve">(</span><span class="gold">"demo"</span
+              ><span class="deep-mauve">)</span
+              ><span class="cadet-blue">;</span> <br />
+              <div class="padding-left">
+                <span class="blue-jeans">x.style</span
+                ><span class="cadet-blue">.fontSize</span>
+                <span class="candy-pink">=</span>
+                <span class="gold">"25px"</span
+                ><span class="cadet-blue">;</span>
+                <br />
+                <span class="blue-jeans">x.style</span
+                ><span class="cadet-blue">.color</span>
+                <span class="candy-pink">=</span>
+                <span class="gold">"red"</span><span class="cadet-blue">;</span>
+              </div>
+              <br />
+              <span class="gold">}</span>
+              <br />
+              <span class="cadet-blue"> <</span><span class="cadet-blue">/</span
+              ><span class="cadet-blue">script</span
+              ><span class="cadet-blue">></span>
+              <br />
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="challenge-section">
+      <header class="challenges-header">
+        <nav class="ch-nav">
+          <ul class="ch-nav__list">
+            <li class="html--btn">
+              <a class="nav-btn" href="#" aria-label="nav-btn">
+                <ion-icon class="html--heading" name="logo-html5"></ion-icon>
+                HTML
+              </a>
+            </li>
+            <li class="css--btn">
+              <a class="nav-btn" href="#" aria-label="nav-btn">
+                <ion-icon class="css--heading" name="logo-css3"></ion-icon> CSS
+              </a>
+            </li>
+            <li class="js--btn">
+              <a class="nav-btn" href="#" aria-label="nav-btn">
+                <ion-icon class="js--heading" name="logo-javascript"></ion-icon>
+                JavaScript
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="challenge-container grid grid--2-cols">
+        <div class="accordion">
+          <!-- <h1 class="accordion-heading">HyperText Markup Language</h1> -->
+          <div class="tabs">
+            <div class="tab">
+              <input type="radio" id="rd0" name="rd" />
+              <label class="tab-close" for="rd0">Close Tabs</label>
+            </div>
+            <div class="tab">
+              <input type="radio" id="rd1" name="rd" />
+              <label class="tab-label" for="rd1">HTML Attributes</label>
+              <div class="tab-content html__attributes">
+                <a
+                  class="exercise-links html-attributes-ex--1"
+                  aria-label="button"
+                  href="#"
+                  data-tab="1"
+                  >Exercise 1</a
+                >
+                <a
+                  class="exercise-links html-attributes-ex--2"
+                  aria-label="button"
+                  href="#"
+                  data-tab="2"
+                  >Exercise 2</a
+                >
+                <a
+                  class="exercise-links html-attributes-ex--3"
+                  aria-label="button"
+                  href="#"
+                  data-tab="3"
+                  >Exercise 3</a
+                >
+                <a
+                  class="exercise-links html-attributes-ex--4"
+                  aria-label="button"
+                  href="#"
+                  data-tab="4"
+                  >Exercise 4</a
+                >
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="rd2" name="rd" />
+              <label class="tab-label" for="rd2">HTML Headings</label>
+              <div class="tab-content html__headings">
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="1"
+                  >Exercise 1</a
+                >
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="2"
+                  >Exercise 2</a
+                >
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="3"
+                  >Exercise 3</a
+                >
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="rd3" name="rd" />
+              <label class="tab-label" for="rd3">HTML Paragraph</label>
+              <div class="tab-content html__paragraph">
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="1"
+                  >Exercise 1</a
+                >
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="2"
+                  >Exercise 2</a
+                >
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="3"
+                  >Exercise 3</a
+                >
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="4"
+                  >Exercise 4</a
+                >
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="5"
+                  >Exercise 5</a
+                >
+              </div>
+            </div>
+            <div class="tab">
+              <input type="radio" id="rd4" name="rd" />
+              <label class="tab-label" for="rd4">HTML Comments</label>
+              <div class="tab-content html__comments">
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="1"
+                  >Exercise 1</a
+                >
+                <a
+                  class="exercise-links"
+                  aria-label="button"
+                  href="#"
+                  data-tab="2"
+                  >Exercise 2</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------- SAMPLEEEEEE -------- -->
+
+        <div class="question-box-container">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              To have the basic fundamentals of HTML!
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <span class="question-text"> <</span
+                ><span class="question-text">h1></span>
+                <span class="question-text">Good luck!</span>
+                <span class="question-text"> <</span
+                ><span class="question-text">/h1></span>
+                <br />
+                <br />
+                <span class="question-text"> <</span
+                ><span class="question-text">p></span>
+                <span class="question-text">You can do it!</span>
+                <span class="question-text"> <</span
+                ><span class="question-text">/p></span>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!------------------------------------------------------------------------
+                                   Q1 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+        <div class="question-box-container h-attributes-q--1 hide-content">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              Add a "tooltip" to the paragraph below with the text "Web Head".
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <span class="question-text"> <</span
+                ><span class="question-text">p></span>
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="5"
+                  size="5"
+                />
+                <span class="question-text"
+                  >="About Web Head">Web Head is a front-end developer's
+                  site.</span
+                >
+                <span class="question-text"> <</span
+                ><span class="question-text">/p></span>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------
+                                   END OF Q1 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------
+                                   Q2 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+        <div class="question-box-container h-attributes-q--2 hide-content">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              Set the size of the image to 250 pixels wide and 400 pixels tall.
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <span class="question-text"> <</span
+                ><span class="question-text">img</span>
+                <span class="question-text">src="webhead.jpg"</span>
+                <span class="question-text">width="</span
+                ><input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="4"
+                  size="4"
+                /><span class="question-text">" height="</span
+                ><input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="4"
+                  size="4"
+                /><span class="question-text">"></span>
+                <br />
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------
+                                   END OF Q2 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------
+                                  Q3 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+        <div class="question-box-container h-attributes-q--3 hide-content">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              Make the element below into a link that goes to
+              "https://webhead.io".
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <span class="question-text"> <</span
+                ><span class="question-text">a</span>
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="5"
+                  size="5"
+                /><span class="question-text"
+                  >"https://webhead.io">This is a link<</span
+                ><span class="question-text">/a></span>
+                <br />
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------
+                                   END OF Q3 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------
+                                   Q4 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+
+        <div class="question-box-container h-attributes-q--4 hide-content">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              Specify an alternate text for the image. <br />
+              Alternate text is useful when the image cannot be displayed, like
+              when the page is read by a screen reader.
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <span class="question-text"><</span
+                ><span class="question-text">img</span>
+                <span class="question-text">src="webhead.svg"</span>
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="3"
+                  size="3"
+                />
+                <span class="question-text">="Web Head Logo"></span>
+                <br />
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------
+                                   END OF Q4 ATTRIBUTES 
+          ------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------
+                                   HEADINGS HTML
+          ------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------
+                                   Q1 HEADINGS
+          ------------------------------------------------------------------------->
+        <div class="question-box-container h-headings-q--1 hide-content">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              Use the correct HTML tag to add a heading with the text "Manila".
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="15"
+                  size="15"
+                />
+                <br />
+                <br />
+                <span class="question-text"> <</span
+                ><span class="question-text">p></span
+                ><span class="question-text">
+                  Manila is the capital city of the Philippines. With a
+                  population of over 14,406,059 this 2022</span
+                >
+                <span class="question-text"> <</span
+                ><span class="question-text">/p></span>
+                <br />
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------
+                                   END OF Q1 HEADINGS
+          ------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------
+                                   Q2 HEADINGS
+          ------------------------------------------------------------------------->
+        <div class="question-box-container h-headings-q--2 hide-content">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              Add six headings to the document with the text "Web Head".
+              <br />
+              <br />
+              Start with the most important heading (the largest) and end with
+              the least important heading (the smallest).
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <span class="question-text"> <</span
+                ><span class="question-text">html></span>
+                <br />
+                <span class="question-text"> <</span
+                ><span class="question-text">body></span>
+                <br />
+                <br />
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="17"
+                  size="17"
+                />
+                <br />
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="17"
+                  size="17"
+                />
+                <br />
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="17"
+                  size="17"
+                />
+                <br />
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="17"
+                  size="17"
+                />
+                <br />
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="17"
+                  size="17"
+                />
+                <br />
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="17"
+                  size="17"
+                />
+                <br />
+                <br />
+                <span class="question-text"> <</span
+                ><span class="question-text">/body></span>
+                <br />
+                <span class="question-text"> <</span
+                ><span class="question-text">/html></span>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------
+                                   END OF Q2 HEADINGS
+          ------------------------------------------------------------------------->
+
+        <!------------------------------------------------------------------------
+                                   Q3 HEADINGS
+          ------------------------------------------------------------------------->
+        <div class="question-box-container h-headings-q--3 hide-content">
+          <div class="question-box">
+            <h1>Challenge:</h1>
+            <p class="question-details">
+              Add a horizontal rule between the h1 and h2 headings.
+            </p>
+
+            <div class="box">
+              <div class="title-box">
+                <ion-icon class="cog-icon" name="cog-outline"></ion-icon>
+                <p class="example-title html--heading">HTML Challenge</p>
+                <ion-icon
+                  class="arrow-down-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+
+              <div class="question-content">
+                <span class="question-text"> <</span
+                ><span class="question-text">h1></span>
+                <span class="question-text">Lorem Ipsum</span
+                ><span class="question-text"> <</span
+                ><span class="question-text">/h1></span>
+                <br />
+                <br />
+                <input
+                  class="answer-input"
+                  title="input-for-answer"
+                  type="text"
+                  name="answer-input"
+                  maxlength="4"
+                  size="4"
+                />
+                <br />
+                <br />
+                <span class="question-text"> <</span
+                ><span class="question-text">h2></span
+                ><span class="question-text"
+                  >Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.</span
+                >
+                <br />
+                <span class="question-text"> <</span
+                ><span class="question-text">/h2></span>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------
+                                   END OF Q3 HEADINGS
+          ------------------------------------------------------------------------->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="footer-text">
+          Copyright &copy; 2023 by Web Head, Inc. All rights reserved.
+        </span>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
