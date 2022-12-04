@@ -649,6 +649,7 @@ input:checked ~ .tab-content {
   gap: 2.4rem;
   justify-content: end;
   padding-right: 2.4rem;
+  padding-bottom: 2.4rem;
 }
 
 .ch-btn {
