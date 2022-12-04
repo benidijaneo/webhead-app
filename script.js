@@ -42,6 +42,21 @@ const smoothScroll = (element) =>
   element.scrollIntoView({ behavior: "smooth" });
 
 const switchMode = (mode, opt1, opt2) => (mode === opt1 ? opt2 : opt1);
+
+const hideContentToggle = function (topic, e) {
+  e.preventDefault();
+  const clicked = e.target.closest(".exercise-links");
+
+  if (!clicked) return;
+  smoothScroll(questionBoxContainerEl);
+
+  questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
+
+  document
+    .querySelector(`.h-${topic}-q--${clicked.dataset.tab}`)
+    .classList.remove("hide-content");
+};
+
 //#endregion
 
 //#region ----- Initialization -----
@@ -83,62 +98,22 @@ btnLearnJsEl.addEventListener("click", (e) => {
 
 // Attributes
 htmlAttributesContainerEl.addEventListener("click", (e) => {
-  e.preventDefault();
-  const clicked = e.target.closest(".exercise-links");
-
-  if (!clicked) return;
-  smoothScroll(questionBoxContainerEl);
-
-  questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
-
-  document
-    .querySelector(`.h-attributes-q--${clicked.dataset.tab}`)
-    .classList.remove("hide-content");
+  hideContentToggle("attributes", e);
 });
 
 // Headings
 htmlHeadingsContainerEl.addEventListener("click", (e) => {
-  e.preventDefault();
-  const clicked = e.target.closest(".exercise-links");
-
-  if (!clicked) return;
-  smoothScroll(questionBoxContainerEl);
-
-  questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
-
-  document
-    .querySelector(`.h-headings-q--${clicked.dataset.tab}`)
-    .classList.remove("hide-content");
+  hideContentToggle("attributes", e);
 });
 
 // Paragraph
 htmlAttributesContainerEl.addEventListener("click", (e) => {
-  e.preventDefault();
-  const clicked = e.target.closest(".exercise-links");
-
-  if (!clicked) return;
-  smoothScroll(questionBoxContainerEl);
-
-  questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
-
-  document
-    .querySelector(`.h-attributes-q--${clicked.dataset.tab}`)
-    .classList.remove("hide-content");
+  hideContentToggle("attributes", e);
 });
 
 // Comments
 htmlAttributesContainerEl.addEventListener("click", (e) => {
-  e.preventDefault();
-  const clicked = e.target.closest(".exercise-links");
-
-  if (!clicked) return;
-  smoothScroll(questionBoxContainerEl);
-
-  questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
-
-  document
-    .querySelector(`.h-attributes-q--${clicked.dataset.tab}`)
-    .classList.remove("hide-content");
+  hideContentToggle("attributes", e);
 });
 //#endregion
 //#endregion
