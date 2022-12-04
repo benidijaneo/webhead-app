@@ -461,6 +461,7 @@ html {
 
 .challenge-container {
   max-width: 120rem;
+  background: url(/img/challenge-container-bg.svg);
   margin: 8rem auto 0 auto;
   padding: 4rem 8rem 0 8rem;
   border-radius: 9px;
