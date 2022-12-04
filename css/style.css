@@ -551,6 +551,8 @@ input:focus {
 .exercise-links:link,
 .exercise-links:visited {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   font-size: 1.6rem;
   color: var(--challenge-content-clr);
@@ -565,6 +567,12 @@ input:focus {
 
 .exercise-links:focus {
   outline: none;
+}
+
+.check-icon {
+  padding-right: 2rem;
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 .tab-close {
