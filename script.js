@@ -103,7 +103,7 @@ htmlAttributesContainerEl.addEventListener("click", (e) => {
 
 // Headings
 htmlHeadingsContainerEl.addEventListener("click", (e) => {
-  hideContentToggle("attributes", e);
+  hideContentToggle("headings", e);
 });
 
 // Paragraph
@@ -117,5 +117,3 @@ htmlAttributesContainerEl.addEventListener("click", (e) => {
 });
 //#endregion
 //#endregion
-
-//  tangina mo
