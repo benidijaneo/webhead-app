@@ -23,6 +23,8 @@ const btnJsEl = document.querySelector(".js--btn");
 // HTML Challenges
 const htmlAttributesContainerEl = document.querySelector(".html__attributes");
 const htmlHeadingsContainerEl = document.querySelector(".html__headings");
+const htmlParagraphContainerEl = document.querySelector(".html__paragraph");
+const htmlCommentsContainerEl = document.querySelector(".html__comments");
 
 // Question box container
 const questionBoxContainerAllEl = document.querySelectorAll(
@@ -107,13 +109,13 @@ htmlHeadingsContainerEl.addEventListener("click", (e) => {
 });
 
 // Paragraph
-htmlAttributesContainerEl.addEventListener("click", (e) => {
-  hideContentToggle("attributes", e);
+htmlParagraphContainerEl.addEventListener("click", (e) => {
+  hideContentToggle("paragraphs", e);
 });
 
 // Comments
-htmlAttributesContainerEl.addEventListener("click", (e) => {
-  hideContentToggle("attributes", e);
+htmlCommentsContainerEl.addEventListener("click", (e) => {
+  hideContentToggle("comments", e);
 });
 //#endregion
 //#endregion
