@@ -93,6 +93,7 @@ btnModeToggleEl.addEventListener("click", (e) => {
   e.preventDefault();
   mode = switchMode(mode, light, dark);
   btnModeEl.name = mode;
+
 });
 
 btnChallengesEl.addEventListener("click", (e) => {
@@ -183,37 +184,53 @@ btnSubmitAnsEl.forEach((btn) =>
 */
 const btnAtt1 = document.querySelector(".att-submit--1");
 const btnAtt2 = document.querySelector(".att-submit--2");
+const btnAtt3 = document.querySelector(".att-submit--3");
 
+const markAsDone = (btn, click) => {
+  btn.style.backgroundColor = "green";
+  btn.textContent = "Mark as done";
+
+  click.addEventListener("click", (e) =>
+    document
+      .querySelector(`.h-att-cm-${click.dataset.tab}`)
+      .classList.remove("hide-content")
+  );
+};
+
+const tryAgain = (btn) => {
+  btn.style.backgroundColor = "red";
+  btn.textContent = "Try again";
+};
+
+// SUBMIT
 btnAtt1.addEventListener("click", (e) => {
   e.preventDefault();
-
   const clicked = e.target;
   const answer1 = document.querySelector(".att-1--a");
 
-  if (answer1.value === answers[0].htmlAttribute[1].a) {
-    btnAtt1.style.backgroundColor = "green";
-    btnAtt1.textContent = "Mark as done";
-  } else {
-    btnAtt1.style.backgroundColor = "red";
-    btnAtt1.textContent = "Try again";
-  }
+  answer1.value === answers[0].htmlAttribute[1].a
+    ? markAsDone(btnAtt1, clicked)
+    : tryAgain(btnAtt1);
 });
 
 btnAtt2.addEventListener("click", (e) => {
   e.preventDefault();
-
   const clicked = e.target;
   const answer1 = document.querySelector(".att-2--a");
   const answer2 = document.querySelector(".att-2--b");
 
-  if (
-    answer1.value === answers[0].htmlAttribute[2].a &&
-    answer2.value === answers[0].htmlAttribute[2].b
-  ) {
-    btnAtt2.style.backgroundColor = "green";
-    btnAtt2.textContent = "Mark as done";
-  } else {
-    btnAtt2.style.backgroundColor = "red";
-    btnAtt2.textContent = "Try again";
-  }
+  answer1.value === answers[0].htmlAttribute[2].a &&
+  answer2.value === answers[0].htmlAttribute[2].b
+    ? markAsDone(btnAtt2, clicked)
+    : tryAgain(btnAtt2);
+});
+
+btnAtt3.addEventListener("click", (e) => {
+  e.preventDefault();
+  const clicked = e.target;
+  const answer1 = document.querySelector(".att-3--a");
+
+  answer1.value === answers[0].htmlAttribute[3].a
+    ? markAsDone(btnAtt3, clicked)
+    : tryAgain(btnAtt3);
 });
