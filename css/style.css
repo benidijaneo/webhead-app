@@ -459,6 +459,11 @@ html {
   align-items: center;
 }
 
+.nav-btn:hover,
+.nav-btn:active {
+  color: #343434;
+}
+
 .challenge-container {
   max-width: 120rem;
   background: url(/img/challenge-container-bg.svg);
@@ -566,6 +571,7 @@ input:focus {
 }
 
 .exercise-links:focus {
+  background-color: var(--main-heading-clr);
   outline: none;
 }
 
