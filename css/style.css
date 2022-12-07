@@ -20,11 +20,11 @@
   --general-text-clr-dm: #faf9f6;
 
   /* LIGHT MODE COLOR */
-  /* --sub-heading-clr--wm: #333;
+  --sub-heading-clr-wm: #333;
   --primary-bg-wm: #ffffff;
   --secondary-bg-wm: #e6e6e6;
   --sample-box-clr-wm: #333333;
-  --general-text-clr-wm: #000; */
+  --general-text-clr-wm: #000;
 
   /* --------  HTML LOGO CLR -------- */
   --html-prim-clr: #ef652a;
@@ -51,6 +51,7 @@ body {
   );
 
   overflow-x: hidden;
+  transition: all 1.25s;
 }
 
 html {
@@ -717,4 +718,22 @@ input:checked ~ .tab-content {
 .footer-text {
   font-size: 1.6rem;
   color: var(--general-text-clr-dm);
+}
+
+/* js */
+.s-h-clr-wm{
+  color: var(--sub-heading-clr-wm);
+  transition: all 1.25s;
+}
+.p-bg-wm{
+  background:var(--primary-bg-wm);
+  transition: all 1.25s;
+}
+.s-b-clr-wm{
+  background-color: var(--sample-box-clr-wm);
+  transition: all 1.25s;
+}
+.g-t-clr-wm{
+  color: #000;
+  transition: all 1.25s;
 }

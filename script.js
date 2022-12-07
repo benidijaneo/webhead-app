@@ -119,9 +119,18 @@ const questionBoxContainerEl = document.querySelector(
   ".question-box-container"
 );
 
+// Mode
 let dark = "moon-sharp",
   light = "sunny-outline",
   mode = dark;
+
+let d1 = "d",
+  w1 = "w",
+  m1 = d1;
+
+let d2 = "d",
+  w2 = "w",
+  m2 = w2;
 
 //#region ----- Challenges Objects -----
 
@@ -311,6 +320,20 @@ btnModeToggleEl.addEventListener("click", (e) => {
   e.preventDefault();
   mode = switchMode(mode, light, dark);
   btnModeEl.name = mode;
+
+  document.querySelector(".sub-heading").classList.toggle("s-h-clr-wm");
+  document.querySelector("body").classList.toggle("p-bg-wm");
+  document
+    .querySelectorAll(".box")
+    .forEach((b) => b.classList.toggle("s-b-clr-wm"));
+  document
+    .querySelectorAll(".desc")
+    .forEach((t) => t.classList.toggle("g-t-clr-wm"));
+  document
+    .querySelectorAll(".tabs")
+    .forEach((t) => t.classList.toggle("g-t-clr-wm"));
+  btnModeEl.classList.toggle("g-t-clr-wm");
+  document.querySelector(".primary-text").classList.toggle("s-h-clr-wm");
 });
 
 btnChallengesEl.addEventListener("click", (e) => {
