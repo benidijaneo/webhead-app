@@ -1,6 +1,7 @@
 "use strict";
 
-//#region ----- Variables -----
+function init(){
+  //#region ----- Variables -----
 // Elements
 const logosSectionEl = document.querySelector(".section-logos");
 const challengesSectionEl = document.querySelector(".challenge-section");
@@ -1290,7 +1291,9 @@ btnFun4.addEventListener("click", (e) => {
 
 //#endregion
 //#endregion
+}
 
+init();
 /////////////////////////////////////////////////////////////
 
 // tilt
