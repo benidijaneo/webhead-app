@@ -454,7 +454,7 @@ html {
   color: #fff;
   text-decoration: none;
   font-size: 2.4rem;
-
+  font-weight: bold;
   display: flex;
   gap: 1.4rem;
   align-items: center;
@@ -721,19 +721,19 @@ input:checked ~ .tab-content {
 }
 
 /* js */
-.s-h-clr-wm{
+.s-h-clr-wm {
   color: var(--sub-heading-clr-wm);
   transition: all 1.25s;
 }
-.p-bg-wm{
-  background:var(--primary-bg-wm);
+.p-bg-wm {
+  background: var(--primary-bg-wm);
   transition: all 1.25s;
 }
-.s-b-clr-wm{
+.s-b-clr-wm {
   background-color: var(--sample-box-clr-wm);
   transition: all 1.25s;
 }
-.g-t-clr-wm{
+.g-t-clr-wm {
   color: #000;
   transition: all 1.25s;
 }
