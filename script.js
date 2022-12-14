@@ -32,6 +32,7 @@ function init() {
   const htmlHeadingsContainerEl = document.querySelector(".html__headings");
   const htmlParagraphContainerEl = document.querySelector(".html__paragraph");
   const htmlCommentsContainerEl = document.querySelector(".html__comments");
+  const htmlFormattingContainerEl = document.querySelector(".html__formatting");
 
   // CSS Challenges
   const cssSelectorContainerEl = document.querySelector(".css__selector");
@@ -63,6 +64,10 @@ function init() {
 
   const btnCom1 = document.querySelector(".com-submit--1");
   const btnCom2 = document.querySelector(".com-submit--2");
+
+  const btnFor1 = document.querySelector(".for-submit--1");
+  const btnFor2 = document.querySelector(".for-submit--2");
+  const btnFor3 = document.querySelector(".for-submit--3");
 
   // CSS-----------------
   const btnSel1 = document.querySelector(".sel-submit--1");
@@ -104,19 +109,8 @@ function init() {
   const btnShowAnswer = document.querySelectorAll(".show-answer__btn");
   //#endregion
 
-  // Anser input
-  const answerInput = document.querySelector(".answer-input");
-
-  const attQuestion1El = document.querySelector(".att-q--1");
-
-  // Submit buttons
-  const btnSubmitAnsEl = document.querySelectorAll(".submit-answer__btn");
-
   // Question box container
   const questionBoxContainerAllEl = document.querySelectorAll(
-    ".question-box-container"
-  );
-  const questionBoxContainerEl = document.querySelector(
     ".question-box-container"
   );
 
@@ -164,6 +158,11 @@ function init() {
     htmlComments: {
       1: { a: "<!--", b: "-->" },
       2: { a: "<!--", b: "-->" },
+    },
+    htmlFormatting: {
+      1: { a: "<strong>", b: "</strong>" },
+      2: { a: "<i>", b: "</i>" },
+      3: { a: "<em>", b: "</em>" },
     },
   };
 
@@ -429,6 +428,12 @@ function init() {
   htmlCommentsContainerEl.addEventListener("click", (e) => {
     hideContentToggle("h", "comments", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("h", "comments", e.target.dataset.tab));
+  });
+
+  // Formatting
+  htmlFormattingContainerEl.addEventListener("click", (e) => {
+    hideContentToggle("h", "formatting", e, ".exercise-links");
+    smoothScroll(smoothScrollCallback("h", "formatting", e.target.dataset.tab));
   });
   //#endregion
 
@@ -779,6 +784,77 @@ function init() {
     answer2.value === answers[0].htmlComments[2].b
       ? markAsDone("h", btnCom2, "com", clicked)
       : tryAgain(btnCom2);
+  });
+  //#endregion
+
+  //#region ----- HTML Formatting -----
+  btnFor1.addEventListener("click", (e) => {
+    e.preventDefault();
+    const clicked = e.target;
+    const answer1 = document.querySelector(".for-1--a");
+    const answer2 = document.querySelector(".for-1--b");
+
+    showAnswer(
+      answer1,
+      answer2,
+      null,
+      null,
+      null,
+      null,
+      answers[0].htmlFormatting[1].a,
+      answers[0].htmlFormatting[1].b
+    );
+
+    answer1.value === answers[0].htmlFormatting[1].a &&
+    answer2.value === answers[0].htmlFormatting[1].b
+      ? markAsDone("h", btnFor1, "for", clicked)
+      : tryAgain(btnFor1);
+  });
+
+  btnFor2.addEventListener("click", (e) => {
+    e.preventDefault();
+    const clicked = e.target;
+    const answer1 = document.querySelector(".for-2--a");
+    const answer2 = document.querySelector(".for-2--b");
+
+    showAnswer(
+      answer1,
+      answer2,
+      null,
+      null,
+      null,
+      null,
+      answers[0].htmlFormatting[2].a,
+      answers[0].htmlFormatting[2].b
+    );
+
+    answer1.value === answers[0].htmlFormatting[2].a &&
+    answer2.value === answers[0].htmlFormatting[2].b
+      ? markAsDone("h", btnFor2, "for", clicked)
+      : tryAgain(btnFor2);
+  });
+
+  btnFor3.addEventListener("click", (e) => {
+    e.preventDefault();
+    const clicked = e.target;
+    const answer1 = document.querySelector(".for-3--a");
+    const answer2 = document.querySelector(".for-3--b");
+
+    showAnswer(
+      answer1,
+      answer2,
+      null,
+      null,
+      null,
+      null,
+      answers[0].htmlFormatting[3].a,
+      answers[0].htmlFormatting[3].b
+    );
+
+    answer1.value === answers[0].htmlFormatting[3].a &&
+    answer2.value === answers[0].htmlFormatting[3].b
+      ? markAsDone("h", btnFor3, "for", clicked)
+      : tryAgain(btnFor3);
   });
   //#endregion
 
