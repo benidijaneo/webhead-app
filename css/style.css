@@ -453,7 +453,7 @@ html {
 
 .challenge-section {
   padding: 0 0 6.4rem 0;
-  background-image: url(/img/Ocean-2.5s-1872px.svg);
+  background-image: url(img/Ocean-2.5s-1872px.svg);
   background-position: bottom;
   background-size: cover;
   /* background-image: url(/Cloud-14.3s-1084px.svg); */
@@ -493,7 +493,7 @@ html {
 
 .challenge-container {
   max-width: 120rem;
-  background: url(/img/challenge-container-bg.svg);
+  background: url(img/challenge-container-bg.svg);
   margin: 8rem auto 0 auto;
   padding: 4rem 8rem 0 8rem;
   border-radius: 9px;
