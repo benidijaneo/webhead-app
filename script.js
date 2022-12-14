@@ -399,16 +399,19 @@ function init() {
   // Headings
   htmlHeadingsContainerEl.addEventListener("click", (e) => {
     hideContentToggle("h", "headings", e);
+    smoothScroll(smoothScrollCallback("h", "headings", e.target.dataset.tab));
   });
 
   // Paragraph
   htmlParagraphContainerEl.addEventListener("click", (e) => {
     hideContentToggle("h", "paragraphs", e);
+    smoothScroll(smoothScrollCallback("h", "paragraphs", e.target.dataset.tab));
   });
 
   // Comments
   htmlCommentsContainerEl.addEventListener("click", (e) => {
     hideContentToggle("h", "comments", e);
+    smoothScroll(smoothScrollCallback("h", "comments", e.target.dataset.tab));
   });
   //#endregion
 
@@ -417,36 +420,44 @@ function init() {
   // Selectors
   cssSelectorContainerEl.addEventListener("click", (e) => {
     hideContentToggle("c", "selector", e);
+    smoothScroll(smoothScrollCallback("c", "selector", e.target.dataset.tab));
   });
 
   // Margin
   cssMarginContainerEl.addEventListener("click", (e) => {
     hideContentToggle("c", "margin", e);
+    smoothScroll(smoothScrollCallback("c", "margin", e.target.dataset.tab));
   });
 
   // Padding
   cssPaddingContainerEl.addEventListener("click", (e) => {
     hideContentToggle("c", "padding", e);
+    smoothScroll(smoothScrollCallback("c", "padding", e.target.dataset.tab));
   });
 
   // Height/ Width
   cssHeightWidhtContainerEl.addEventListener("click", (e) => {
     hideContentToggle("c", "hw", e);
+    smoothScroll(smoothScrollCallback("c", "hw", e.target.dataset.tab));
   });
   //#endregion
 
   //#region ----- JS Challenges -----
   jsVariableContainerEl.addEventListener("click", (e) => {
     hideContentToggle("j", "variables", e);
+    smoothScroll(smoothScrollCallback("j", "variables", e.target.dataset.tab));
   });
   jsOperatorsContainerEl.addEventListener("click", (e) => {
     hideContentToggle("j", "operators", e);
+    smoothScroll(smoothScrollCallback("j", "operators", e.target.dataset.tab));
   });
   jsDataTypesContainerEl.addEventListener("click", (e) => {
     hideContentToggle("j", "datatypes", e);
+    smoothScroll(smoothScrollCallback("j", "datatypes", e.target.dataset.tab));
   });
   jsFunctionsContainerEl.addEventListener("click", (e) => {
     hideContentToggle("j", "functions", e);
+    smoothScroll(smoothScrollCallback("j", "functions", e.target.dataset.tab));
   });
   //#endregion
 
