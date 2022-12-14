@@ -26,7 +26,7 @@
 
   /* LIGHT MODE COLOR */
   --sub-heading-clr-wm: #333;
-  --primary-bg-wm: rgb(245 245 244);
+  --primary-bg-wm: rgb(245, 245, 244);
   --secondary-bg-wm: #e6e6e6;
   --sample-box-clr-wm: #333333;
   --general-text-clr-wm: #000;
@@ -124,7 +124,7 @@ html {
   text-decoration: none;
   border-radius: 0.5rem;
   padding: 1.6rem 2.4rem;
-  margin-bottom: 6.8rem;
+  margin-bottom: 4.5rem;
   font-family: inherit;
   font-weight: 500;
   font-size: 2rem;
@@ -167,18 +167,45 @@ html {
 
 .nav-link:link,
 .nav-link:visited {
-  display: inline-block;
-  text-decoration: none;
   font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
   color: var(--main-heading-clr);
-  transition: all 0.3s;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.2, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  text-decoration: none;
 }
 
 .nav-link:hover,
-.nav-link:active {
-  color: var(--sub-heading-clr-dm);
+.nav-link:active,
+nav:focus {
+  opacity: 50%;
+}
+
+.nav-link:focus:after,
+.nav-link:hover:after {
+  width: 90%;
+  left: 0%;
+}
+
+.nav-link:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #a18be5;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 /* -> TOGGLE BUTTON  */
@@ -262,7 +289,8 @@ html {
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .section-logos {
-  padding: 12.8rem 0;
+  padding: 10.8rem 0;
+  scroll-margin: 30rem;
 }
 
 .logos {
