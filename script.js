@@ -229,14 +229,15 @@ function init() {
   //#region ----- Functions -----
   const smoothScroll = (element) =>
     element.scrollIntoView({ behavior: "smooth" });
+
   const smoothScrollCallback = (section, topic, number) =>
     document.querySelector(`.${section}-${topic}-q--${number}`);
 
   const switchMode = (mode, opt1, opt2) => (mode === opt1 ? opt2 : opt1);
 
-  const hideContentToggle = function (topic, chall, e) {
+  const hideContentToggle = function (topic, chall, e, btn) {
     e.preventDefault();
-    const clicked = e.target.closest(".exercise-links");
+    const clicked = e.target.closest(btn);
 
     if (!clicked) return;
 
@@ -373,18 +374,34 @@ function init() {
   btnHtmlEl.addEventListener("click", (e) => {
     e.preventDefault();
 
+    questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
+
+    document
+      .querySelector(`.h-attributes-q--1`)
+      .classList.remove("hide-content");
+    smoothScroll(challengesSectionEl);
     switchAccordion("html");
   });
 
   btnCssEl.addEventListener("click", (e) => {
     e.preventDefault();
 
+    questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
+
+    document.querySelector(`.c-selector-q--1`).classList.remove("hide-content");
+    smoothScroll(challengesSectionEl);
     switchAccordion("css");
   });
 
   btnJsEl.addEventListener("click", (e) => {
     e.preventDefault();
 
+    questionBoxContainerAllEl.forEach((c) => c.classList.add("hide-content"));
+
+    document
+      .querySelector(`.j-variables-q--1`)
+      .classList.remove("hide-content");
+    smoothScroll(challengesSectionEl);
     switchAccordion("js");
   });
 
@@ -392,25 +409,25 @@ function init() {
 
   // Attributes
   htmlAttributesContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("h", "attributes", e);
+    hideContentToggle("h", "attributes", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("h", "attributes", e.target.dataset.tab));
   });
 
   // Headings
   htmlHeadingsContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("h", "headings", e);
+    hideContentToggle("h", "headings", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("h", "headings", e.target.dataset.tab));
   });
 
   // Paragraph
   htmlParagraphContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("h", "paragraphs", e);
+    hideContentToggle("h", "paragraphs", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("h", "paragraphs", e.target.dataset.tab));
   });
 
   // Comments
   htmlCommentsContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("h", "comments", e);
+    hideContentToggle("h", "comments", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("h", "comments", e.target.dataset.tab));
   });
   //#endregion
@@ -419,44 +436,44 @@ function init() {
 
   // Selectors
   cssSelectorContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("c", "selector", e);
+    hideContentToggle("c", "selector", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("c", "selector", e.target.dataset.tab));
   });
 
   // Margin
   cssMarginContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("c", "margin", e);
+    hideContentToggle("c", "margin", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("c", "margin", e.target.dataset.tab));
   });
 
   // Padding
   cssPaddingContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("c", "padding", e);
+    hideContentToggle("c", "padding", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("c", "padding", e.target.dataset.tab));
   });
 
   // Height/ Width
   cssHeightWidhtContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("c", "hw", e);
+    hideContentToggle("c", "hw", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("c", "hw", e.target.dataset.tab));
   });
   //#endregion
 
   //#region ----- JS Challenges -----
   jsVariableContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("j", "variables", e);
+    hideContentToggle("j", "variables", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("j", "variables", e.target.dataset.tab));
   });
   jsOperatorsContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("j", "operators", e);
+    hideContentToggle("j", "operators", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("j", "operators", e.target.dataset.tab));
   });
   jsDataTypesContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("j", "datatypes", e);
+    hideContentToggle("j", "datatypes", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("j", "datatypes", e.target.dataset.tab));
   });
   jsFunctionsContainerEl.addEventListener("click", (e) => {
-    hideContentToggle("j", "functions", e);
+    hideContentToggle("j", "functions", e, ".exercise-links");
     smoothScroll(smoothScrollCallback("j", "functions", e.target.dataset.tab));
   });
   //#endregion
