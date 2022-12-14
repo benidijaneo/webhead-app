@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: #fff;
+  background-color: #a18be5;
+}
+
 :root {
   /* PERMANENT */
   --main-heading-clr: #a18be5;
@@ -21,7 +26,7 @@
 
   /* LIGHT MODE COLOR */
   --sub-heading-clr-wm: #333;
-  --primary-bg-wm: #ffffff;
+  --primary-bg-wm: rgb(245 245 244);
   --secondary-bg-wm: #e6e6e6;
   --sample-box-clr-wm: #333333;
   --general-text-clr-wm: #000;
@@ -102,7 +107,7 @@ html {
   text-align: center;
 }
 
-.btn:link,
+/* .btn:link,
 .btn:visited {
   display: inline-block;
   text-decoration: none;
@@ -112,8 +117,26 @@ html {
   border-radius: 9px;
   transition: all 0.3s;
   margin-bottom: 6.8rem;
+} */
+.btn:link,
+.btn:visited {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 1.6rem 2.4rem;
+  margin-bottom: 6.8rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 2rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
-
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------
                     HEADER
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -222,14 +245,16 @@ html {
 .learn-more--btn:visited {
   background-color: var(--main-heading-clr);
   color: #3d3b3f;
+  font-weight: bold;
 }
 
 .learn-more--btn:hover,
 .learn-more--btn:active {
   background-color: var(--sub-heading-clr-dm);
-  color: var(--main-heading-clr);
+  /* color: var(--main-heading-clr); */
+  color: #615389;
   /* -> Trick to adding another border  */
-  box-shadow: inset 0 0 0 2px var(--main-heading-clr);
+  /* box-shadow: inset 0 0 0 2px var(--main-heading-clr); */
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -270,7 +295,8 @@ html {
 .learn-html--btn:link,
 .learn-html--btn:visited {
   background-color: var(--html-prim-clr);
-  color: #2d333b;
+  color: #fff;
+  font-weight: bold;
 
   margin-bottom: 0;
   transition: all 0.3s;
@@ -279,13 +305,13 @@ html {
 .learn-html--btn:hover,
 .learn-html--btn:active {
   background-color: var(--html-sec-clr);
-  box-shadow: none;
 }
 
 .learn-css--btn:link,
 .learn-css--btn:visited {
   background-color: var(--css-prim-clr);
-  color: #2d333b;
+  color: #fff;
+  font-weight: bold;
 
   transition: all 0.3s;
   margin-bottom: 0;
@@ -300,7 +326,7 @@ html {
 .learn-js--btn:visited {
   background-color: var(--js-prim-clr);
   color: #2d333b;
-
+  font-weight: bold;
   margin-bottom: 0;
   transition: all 0.3s;
 }
@@ -311,17 +337,17 @@ html {
 
 .html--heading {
   color: var(--html-sec-clr);
-  text-shadow: 3px 1px 3px rgba(0, 0, 0, 1);
+  text-shadow: #000 1px 1px 0;
 }
 
 .css--heading {
   color: var(--css-sec-clr);
-  text-shadow: 3px 1px 3px rgba(0, 0, 0, 1);
+  text-shadow: #000 1px 1px 0;
 }
 
 .js--heading {
   color: var(--js-prim-clr);
-  text-shadow: 3px 1px 3px rgba(0, 0, 0, 1);
+  text-shadow: #000 1px 1px 0;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------
@@ -427,7 +453,7 @@ html {
 
 .challenge-section {
   padding: 0 0 6.4rem 0;
-  background-image: url(/img/Ocean-2.5s-1872px.svg);
+  background-image: url(../img/Ocean-2.5s-1872px.svg);
   background-position: bottom;
   background-size: cover;
   /* background-image: url(/Cloud-14.3s-1084px.svg); */
@@ -454,7 +480,7 @@ html {
   color: #fff;
   text-decoration: none;
   font-size: 2.4rem;
-
+  font-weight: bold;
   display: flex;
   gap: 1.4rem;
   align-items: center;
@@ -467,7 +493,7 @@ html {
 
 .challenge-container {
   max-width: 120rem;
-  background: url(/img/challenge-container-bg.svg);
+  background: url(../img/challenge-container-bg.svg);
   margin: 8rem auto 0 auto;
   padding: 4rem 8rem 0 8rem;
   border-radius: 9px;
@@ -721,19 +747,19 @@ input:checked ~ .tab-content {
 }
 
 /* js */
-.s-h-clr-wm{
+.s-h-clr-wm {
   color: var(--sub-heading-clr-wm);
   transition: all 1.25s;
 }
-.p-bg-wm{
-  background:var(--primary-bg-wm);
+.p-bg-wm {
+  background: var(--primary-bg-wm);
   transition: all 1.25s;
 }
-.s-b-clr-wm{
+.s-b-clr-wm {
   background-color: var(--sample-box-clr-wm);
   transition: all 1.25s;
 }
-.g-t-clr-wm{
+.g-t-clr-wm {
   color: #000;
   transition: all 1.25s;
 }
